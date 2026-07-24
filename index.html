@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CubeStudio</title>
+
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+
+    <div id="sidebar">
+
+        <button id="menu-btn">
+            ☰
+        </button>
+
+        <div id="menu-content">
+
+            <button id="simulator-page-btn">
+                Simulator
+            </button>
+
+            <button id="solver-page-btn">
+                Solver
+            </button>
+
+            <button id="info-page-btn">
+                Info & Controls
+            </button>
+
+            <button id="about-page-btn">
+                About
+            </button>
+
+        </div>
+
+    </div>
+
+    <div id="main">
+
+        <!-- ================= Simulator ================= -->
+
+        <div id="simulator-page">
+
+            <div class="top-bar">
+
+                <button class="manual-input-btn">
+                    Input
+                </button>
+
+                <h1>Simulator</h1>
+
+                <div class="info-panel">
+
+                    <span id="move-count">
+                        Moves: 0
+                    </span>
+
+                    <span id="timer">
+                        Time: 00:00
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div id="game" class="cube-container"></div>
+
+            <div id="controls">
+
+                <button id="scramble-btn">
+                    Scramble
+                </button>
+
+                <button id="reset-btn">
+                    Reset
+                </button>
+
+                <button id="undo-btn">
+                    Undo
+                </button>
+
+                <button id="redo-btn">
+                    Redo
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- ================= Solver ================= -->
+
+        <div id="solver-page" class="hidden">
+
+            <div class="top-bar">
+
+                <button class="manual-input-btn">
+                    Input
+                </button>
+
+                <h1>Solver</h1>
+
+                <div class="info-panel">
+
+                    <span id="solver-move-count">
+                        Moves: 0
+                    </span>
+
+                    <span id="solver-timer">
+                        Time: 00:00
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div id="current-move-box" class="hidden">
+
+                <button id="close-move-box" class="floating-close">
+                    ✕
+                </button>
+
+                <p>Current Move</p>
+
+                <h1 id="current-move">-</h1>
+
+                <p id="move-progress">0 / 0</p>
+
+                <div id="solver-playback-controls">
+
+                    <button id="solver-pause-btn">
+                        ⏸
+                    </button>
+
+                    <button id="solver-replay-btn">
+                        ↺
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div id="solution-queue-box" class="hidden">
+
+                <button id="close-solution-box" class="floating-close">
+                    ✕
+                </button>
+
+                <div id="solution-queue"></div>
+
+            </div>
+
+            <div id="solver-game" class="cube-container"></div>
+
+            <div id="hint-bar" class="hidden"></div>
+
+            <div id="solver-controls">
+
+                <button id="solver-start-btn">
+                    Start
+                </button>
+
+                <button id="solver-hint-btn">
+                    Hint
+                </button>
+
+                <button id="solver-solve-btn">
+                    Solve
+                </button>
+
+                <button id="solver-restart-btn">
+                    Restart
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- ================= Info  ================= -->
+
+        <div id="info-page" class="page hidden">
+
+
+
+        </div>
+
+        <!-- ================= About ================= -->
+
+        <div id="about-page" class="hidden"></div>
+
+    </div>
+
+    <div id="success-popup" class="hidden"></div>
+
+    <!-- ================= Manual Input ================= -->
+
+    <div id="manual-input-modal" class="hidden">
+
+        <div id="manual-input-window">
+
+            <div id="manual-header">
+
+                <h2>Manual Cube Input</h2>
+
+                <button id="manual-close-btn">
+                    ✕
+                </button>
+
+            </div>
+
+            <div id="manual-top-bar">
+
+                <div id="input-method">
+
+                    <button class="method-btn active">
+                        Manual Input
+                    </button>
+
+                    <button class="method-btn" disabled>
+                        Camera Scan (Coming Soon)
+                    </button>
+
+                </div>
+
+                <div id="notation-status">
+
+                    <span>Rubik's Cube Notation:</span>
+
+                    <span id="notation-validity">
+                        Invalid
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div id="manual-content">
+
+                <div id="cube-net-container"></div>
+
+                <div id="color-palette"></div>
+
+            </div>
+
+            <div id="manual-actions">
+
+                <button id="verify-cube-btn">
+                    Verify Cube
+                </button>
+
+                <button id="clear-manual-btn">
+                    Clear
+                </button>
+
+                <button
+                    id="integrate-cube-btn"
+                    disabled>
+
+                    Integrate Cube
+
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="onboarding-popup" class="hidden">
+
+        <div class="onboarding-box">
+
+            <div class="step-count">
+                <span id="step-number">1</span>/4
+            </div>
+
+
+            <div class="onboarding-icon"></div>
+
+
+            <h2 id="onboarding-title">
+                Welcome to Cube Solver
+            </h2>
+
+
+            <p id="onboarding-text">
+                Learn how to use the simulator.
+            </p>
+
+
+            <div class="progress-dots">
+
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+
+            <div class="onboarding-buttons">
+
+                <button id="skip-onboarding">
+                    Skip
+                </button>
+
+
+                <button id="next-onboarding">
+                    Next →
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    
+
+    <script type="module" src="/src/main.js"></script>
+
+</body>
+
+</html>
