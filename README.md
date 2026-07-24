@@ -4,6 +4,8 @@ A complete web application for Rubik's Cube simulation, state editing, validatio
 
 ---
 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://cubestudio-1.onrender.com/)
+
 ## About
 
 CubeStudio is a full-stack Rubik's Cube platform that combines an interactive 3D simulator with a complete cube-solving workflow.
@@ -319,12 +321,15 @@ python app.py
 
 # Deployment
 
-The application will be deployed using:
+The application is deployed using Render.
 
-- Frontend: Render
-- Backend: Render
+## Live Demo
 
----
+Frontend:
+https://cubestudio-1.onrender.com/
+
+Backend API:
+(Add your backend Render URL)
 
 # Author
 
