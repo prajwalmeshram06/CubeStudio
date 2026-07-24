@@ -1,7 +1,10 @@
+const API_URL = "https://cubestudio-jz1j.onrender.com";
+
+
 export async function solveCube(cubeNotation){
 
     const response = await fetch(
-        "http://127.0.0.1:8000/solve",
+        `${API_URL}/solve`,
         {
             method: "POST",
 
