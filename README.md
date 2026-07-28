@@ -8,22 +8,34 @@
   <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
 </p>
 
+<h3 align="center">
+A full-stack Rubik's Cube simulation and solving platform
+</h3>
+
 <p align="center">
-  <b>A full-stack Rubik's Cube simulation and solving platform built with Three.js, JavaScript, Flask, and the Kociemba algorithm.</b>
+Built with <b>Three.js</b>, <b>JavaScript</b>, <b>Flask</b>, and the <b>Kociemba algorithm</b>
+</p>
+
+<p align="center">
+Interactive 3D Simulator • Cube State Editor • Validation • Solver • Step-by-Step Replay
+</p>
+
+<p align="center">
+  <a href="https://cubestudio-1.onrender.com/">
+    <img src="https://img.shields.io/badge/🚀_Live_Demo-Open_Now-success?style=for-the-badge" alt="Live Demo">
+  </a>
+  <a href="https://github.com/prajwalmeshram06/CubeStudio">
+    <img src="https://img.shields.io/badge/📂_Source_Code-GitHub-black?style=for-the-badge" alt="GitHub">
+  </a>
 </p>
 
 ---
 
-## Live Demo
+CubeStudio is a complete web application for **Rubik's Cube simulation, state editing, validation, and solving**. It combines a real-time **3D cube simulator** with a **2D cube editor**, a **solver backend**, and an animated **step-by-step solution player**.
 
-**Frontend:** https://cubestudio-1.onrender.com/
-
-**Backend API:** https://cubestudio-jz1j.onrender.com
 ---
 
-# Project Overview
-
-CubeStudio is a complete web application for **Rubik's Cube simulation, state editing, validation, and solving**. It combines a real-time **3D cube simulator** with a **2D cube editor**, a **solver backend**, and an animated **step-by-step solution player**.
+## Project Overview
 
 The project was developed to explore real-world software engineering concepts including:
 
@@ -36,9 +48,9 @@ The project was developed to explore real-world software engineering concepts in
 
 ---
 
-# Key Features
+## Key Features
 
-## Interactive 3D Simulator
+### Interactive 3D Simulator
 
 * Real-time 3D Rubik's Cube built with **Three.js**
 * Smooth animated rotations
@@ -46,7 +58,7 @@ The project was developed to explore real-world software engineering concepts in
 * Keyboard and drag interactions
 * Real-time cube state synchronization
 
-## Cube State Editor
+### Cube State Editor
 
 * Interactive **2D cube net**
 * Color palette-based sticker editing
@@ -54,7 +66,7 @@ The project was developed to explore real-world software engineering concepts in
 * Validation before solving
 * Import edited states directly into the 3D simulator
 
-## Solver System
+### Solver System
 
 * Flask backend integration
 * **Kociemba algorithm** based solving
@@ -62,7 +74,7 @@ The project was developed to explore real-world software engineering concepts in
 * Step-by-step solution animation
 * Hint and replay functionality
 
-## User Experience
+### User Experience
 
 * Scramble cube
 * Reset cube
@@ -80,7 +92,7 @@ Pages included:
 
 ---
 
-# Tech Stack
+## Tech Stack
 
 | Layer            | Technology                           |
 | ---------------- | ------------------------------------ |
@@ -94,7 +106,7 @@ Pages included:
 
 ---
 
-# System Architecture
+## System Architecture
 
 CubeStudio follows a modular full-stack architecture where the frontend manages visualization and interaction, while the backend performs cube validation and solution generation.
 
@@ -124,7 +136,7 @@ flowchart TD
 
 ---
 
-# Application Workflow
+## Application Workflow
 
 ```mermaid
 flowchart LR
@@ -150,7 +162,7 @@ flowchart LR
 
 ---
 
-# Project Structure
+## Project Structure
 
 ```text
 CubeStudio/
@@ -177,46 +189,36 @@ CubeStudio/
 
 ---
 
-# 🎥 Video Tutorial
+## Screenshots
 
-A short walkthrough of CubeStudio demonstrating cube manipulation, manual state editing, validation, and solving.
-
-## Watch the Demo
-
-https://github.com/prajwalmeshram06/CubeStudio/src/assets/demo.mp4
-
----
-
-# Screenshots
-
-## Simulator
+### Simulator
 
 ![3D Simulator](screenshots/simulator.png)
 
-## Solver
+### Solver
 
 ![Solver Interface](screenshots/solver.png)
 
-## Cube State Editor
+### Cube State Editor
 
 ![Cube State Editor](screenshots/editor.png)
 
-## About
+### About
 
 ![About Page](screenshots/about.png)
 
 ---
 
-# Running Locally
+## Running Locally
 
-## Frontend
+### Frontend
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Backend
+### Backend
 
 ```bash
 cd backend
@@ -228,7 +230,7 @@ The frontend will start on Vite's local server and the backend will run on Flask
 
 ---
 
-# Deployment
+## Deployment
 
 The application is deployed using **Render**.
 
@@ -237,7 +239,7 @@ The application is deployed using **Render**.
 
 ---
 
-# Known Limitations
+## Known Limitations
 
 * The current release supports **3×3 Rubik's Cube only**.
 * Mobile experience is functional but not yet fully optimized.
@@ -247,9 +249,9 @@ The application is deployed using **Render**.
 
 ---
 
-# Future Roadmap
+## Future Roadmap
 
-## Version 2
+### Version 2
 
 Planned improvements include:
 
@@ -262,9 +264,9 @@ Planned improvements include:
 
 ---
 
-# Experimental Features
+## Experimental Features
 
-## Computer Vision Cube Scanner
+### Computer Vision Cube Scanner
 
 An experimental camera-based cube scanning pipeline was developed using **OpenCV.js**.
 
@@ -280,7 +282,7 @@ Due to accuracy challenges in uncontrolled lighting conditions, this feature is 
 
 ---
 
-# Acknowledgements
+## Acknowledgements
 
 * **Three.js** for the 3D rendering framework.
 * **Kociemba** Python library for the solving algorithm.
@@ -290,7 +292,7 @@ Due to accuracy challenges in uncontrolled lighting conditions, this feature is 
 
 ---
 
-# Author
+## Author
 
 **Prajwal Meshram**
 
