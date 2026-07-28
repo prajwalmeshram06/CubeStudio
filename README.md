@@ -1,16 +1,14 @@
 # CubeStudio
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Three.js-3D-black?logo=three.js&style=flat-square" alt="Three.js">
-  <img src="https://img.shields.io/badge/Vite-Frontend-646CFF?logo=vite&logoColor=white&style=flat-square" alt="Vite">
-  <img src="https://img.shields.io/badge/Flask-Backend-000000?logo=flask&logoColor=white&style=flat-square" alt="Flask">
-  <img src="https://img.shields.io/badge/Render-Deployment-46E3B7?logo=render&logoColor=black&style=flat-square" alt="Render">
-  <img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/Three.js-3D-black?logo=three.js&style=flat-square" alt="Three.js" />
+  <img src="https://img.shields.io/badge/Vite-Frontend-646CFF?logo=vite&logoColor=white&style=flat-square" alt="Vite" />
+  <img src="https://img.shields.io/badge/Flask-Backend-000000?logo=flask&logoColor=white&style=flat-square" alt="Flask" />
+  <img src="https://img.shields.io/badge/Render-Deployment-46E3B7?logo=render&logoColor=black&style=flat-square" alt="Render" />
+  <img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" alt="License" />
 </p>
 
-<h3 align="center">
-A full-stack Rubik's Cube simulation and solving platform
-</h3>
+<h3 align="center">A full-stack Rubik's Cube simulation and solving platform</h3>
 
 <p align="center">
 Built with <b>Three.js</b>, <b>JavaScript</b>, <b>Flask</b>, and the <b>Kociemba algorithm</b>
@@ -22,12 +20,13 @@ Interactive 3D Simulator • Cube State Editor • Validation • Solver • Ste
 
 <p align="center">
   <a href="https://cubestudio-1.onrender.com/">
-    <img src="https://img.shields.io/badge/LIVE_DEMO-OPEN_NOW-success?style=for-the-badge" alt="Live Demo">
+    <img src="https://img.shields.io/badge/LIVE_DEMO-OPEN_NOW-success?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo" />
   </a>
   <a href="https://github.com/prajwalmeshram06/CubeStudio">
-    <img src="https://img.shields.io/badge/SOURCE_CODE-GITHUB-black?style=for-the-badge" alt="GitHub">
+    <img src="https://img.shields.io/badge/SOURCE_CODE-GITHUB-black?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
 </p>
+
 ---
 
 CubeStudio is a complete web application for **Rubik's Cube simulation, state editing, validation, and solving**. It combines a real-time **3D cube simulator** with a **2D cube editor**, a **solver backend**, and an animated **step-by-step solution player**.
