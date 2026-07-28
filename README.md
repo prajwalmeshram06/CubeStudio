@@ -293,5 +293,3 @@ B.Tech Computer Science & Engineering
 * LinkedIn: https://www.linkedin.com/in/prajwal-meshram-91b82139b/
 
 ---
-
-If you found this project interesting, consider giving the repository a ⭐ on GitHub.
