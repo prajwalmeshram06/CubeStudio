@@ -183,7 +183,7 @@ A short walkthrough of CubeStudio demonstrating cube manipulation, manual state 
 
 ## Watch the Demo
 
-https://github.com/prajwalmeshram06/CubeStudio/assets/demo.mp4
+https://github.com/prajwalmeshram06/CubeStudio/src/assets/demo.mp4
 
 ---
 
