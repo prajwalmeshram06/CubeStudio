@@ -1,6 +1,12 @@
 # CubeStudio
 
-<p align="center"><img src="https://img.shields.io/badge/Three.js-3D-black?logo=three.js" alt="Three.js"> <img src="https://img.shields.io/badge/Frontend-Vite-646CFF?logo=vite&logoColor=white" alt="Vite"> <img src="https://img.shields.io/badge/Backend-Flask-000000?logo=flask&logoColor=white" alt="Flask"> <img src="https://img.shields.io/badge/Deployment-Render-46E3B7?logo=render&logoColor=black" alt="Render"> <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License"></p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Three.js-3D-black?logo=three.js&style=flat-square" alt="Three.js">
+  <img src="https://img.shields.io/badge/Vite-Frontend-646CFF?logo=vite&logoColor=white&style=flat-square" alt="Vite">
+  <img src="https://img.shields.io/badge/Flask-Backend-000000?logo=flask&logoColor=white&style=flat-square" alt="Flask">
+  <img src="https://img.shields.io/badge/Render-Deployment-46E3B7?logo=render&logoColor=black&style=flat-square" alt="Render">
+  <img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" alt="License">
+</p>
 
 <h3 align="center">
 A full-stack Rubik's Cube simulation and solving platform
