@@ -1,130 +1,102 @@
 # CubeStudio
 
-A complete web application for Rubik's Cube simulation, state editing, validation, and solving.
+<p align="center">
+  <img src="https://img.shields.io/badge/Three.js-3D-black?logo=three.js" alt="Three.js">
+  <img src="https://img.shields.io/badge/Frontend-Vite-646CFF?logo=vite&logoColor=white" alt="Vite">
+  <img src="https://img.shields.io/badge/Backend-Flask-000000?logo=flask&logoColor=white" alt="Flask">
+  <img src="https://img.shields.io/badge/Deployment-Render-46E3B7?logo=render&logoColor=black" alt="Render">
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
+</p>
+
+<p align="center">
+  <b>A full-stack Rubik's Cube simulation and solving platform built with Three.js, JavaScript, Flask, and the Kociemba algorithm.</b>
+</p>
 
 ---
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://cubestudio-1.onrender.com/)
+## Live Demo
 
-## About
+**Frontend:** https://cubestudio-1.onrender.com/
 
-CubeStudio is a full-stack Rubik's Cube platform that combines an interactive 3D simulator with a complete cube-solving workflow.
+**Backend API:** https://cubestudio-jz1j.onrender.com
+---
 
-Users can:
+# Project Overview
 
-- Manipulate a realistic 3D Rubik's Cube
-- Create custom cube states using a 2D cube editor
-- Validate cube configurations
-- Generate optimized solutions using the Kociemba algorithm
-- Visualize the solving process step by step
+CubeStudio is a complete web application for **Rubik's Cube simulation, state editing, validation, and solving**. It combines a real-time **3D cube simulator** with a **2D cube editor**, a **solver backend**, and an animated **step-by-step solution player**.
 
-The project was built to explore real-world software engineering concepts by combining 3D graphics, algorithmic problem solving, frontend-backend communication, and modular application architecture.
+The project was developed to explore real-world software engineering concepts including:
+
+* Interactive 3D graphics with Three.js
+* Algorithmic problem solving
+* Frontend-backend communication
+* REST API integration
+* Modular JavaScript architecture
+* Full-stack deployment
 
 ---
 
-# Features
+# Key Features
 
 ## Interactive 3D Simulator
 
-- Real-time 3D Rubik's Cube built with Three.js
-- Smooth animated cube rotations
-- Mouse-based camera controls
-- Manual cube manipulation
-- Real-time cube state synchronization
-
----
+* Real-time 3D Rubik's Cube built with **Three.js**
+* Smooth animated rotations
+* Mouse-based camera controls
+* Keyboard and drag interactions
+* Real-time cube state synchronization
 
 ## Cube State Editor
 
-- Interactive 2D Rubik's Cube representation
-- Color palette based sticker selection
-- Real-time cube state generation
-- Import custom cube configurations into the 3D simulator
-- Cube configuration validation before solving
-
----
+* Interactive **2D cube net**
+* Color palette-based sticker editing
+* Custom cube configuration support
+* Validation before solving
+* Import edited states directly into the 3D simulator
 
 ## Solver System
 
-- Flask backend integration
-- Kociemba algorithm based solving
-- Automatic solution generation
-- Step-by-step solving animation
-- Hint system
-- Solution replay functionality
-
----
+* Flask backend integration
+* **Kociemba algorithm** based solving
+* Optimized solution generation
+* Step-by-step solution animation
+* Hint and replay functionality
 
 ## User Experience
 
-- Scramble functionality
-- Reset cube functionality
-- Move counter
-- Solve timer
-- Undo and redo support
-- Multi-page application interface
+* Scramble cube
+* Reset cube
+* Move counter
+* Solve timer
+* Undo/redo support
+* Multi-page navigation
 
-Pages include:
+Pages included:
 
-```
-Simulator
-Solver
-About
-Information
-```
-
----
-
-## Engineering Features
-
-- Modular JavaScript architecture
-- Separation of frontend and backend responsibilities
-- REST API communication
-- Organized feature-based folder structure
-- Scalable project design
+* Simulator
+* Solver
+* About
+* Information
 
 ---
 
 # Tech Stack
 
-## Frontend
-
-- HTML5
-- CSS3
-- JavaScript (ES6+)
-- Vite
-
-## 3D Graphics
-
-- Three.js
-
-## Backend
-
-- Python
-- Flask
-
-## Algorithm
-
-- Kociemba (Python Library)
-
-## Computer Vision
-
-- OpenCV.js *(Experimental feature planned for v2)*
-
-## Version Control
-
-- Git
-- GitHub
-
-## Deployment
-
-- Render
+| Layer            | Technology                           |
+| ---------------- | ------------------------------------ |
+| Frontend         | HTML5, CSS3, JavaScript (ES6+), Vite |
+| 3D Graphics      | Three.js                             |
+| Backend          | Python, Flask                        |
+| Solver Algorithm | Kociemba                             |
+| Computer Vision  | OpenCV.js *(experimental)*           |
+| Version Control  | Git, GitHub                          |
+| Deployment       | Render                               |
 
 ---
 
 # System Architecture
 
-CubeStudio follows a modular full-stack architecture where the frontend manages user interaction, 3D visualization, and cube state management, while the backend handles solver requests and solution generation through the Kociemba algorithm.
+CubeStudio follows a modular full-stack architecture where the frontend manages visualization and interaction, while the backend performs cube validation and solution generation.
 
 ```mermaid
 flowchart TD
@@ -184,66 +156,34 @@ flowchart LR
 CubeStudio/
 
 ├── src/
-│
 │   ├── core/
-│   │   ├── scene.js              # Three.js scene and camera setup
-│   │   └── animate.js            # Rendering loop
-│   │
 │   ├── cube/
-│   │   ├── cube.js               # Cubie generation
-│   │   ├── rotation.js            # Cube rotation engine
-│   │   ├── moves.js               # Cube move definitions
-│   │   ├── state.js               # Cube state management
-│   │   ├── scramble.js            # Scramble logic
-│   │   ├── reset.js               # Reset functionality
-│   │   └── history.js             # Undo/redo system
-│   │
 │   ├── input/
-│   │   ├── raycast.js             # Object selection
-│   │   ├── dragRotation.js        # Mouse cube rotation
-│   │   ├── gesture.js             # User gestures
-│   │   └── keyboard.js            # Keyboard controls
-│   │
 │   ├── inputMethods/
-│   │   └── manually/
-│   │       ├── cubeNet.js         # 2D cube representation
-│   │       ├── palette.js         # Color selection system
-│   │       ├── integrateCube.js   # Load state into 3D cube
-│   │       └── verifyCube.js      # Cube validation
-│   │
 │   ├── solver/
-│   │   ├── api.js                 # Backend communication
-│   │   ├── cubeNotation.js        # Convert cube state
-│   │   ├── solutionParser.js      # Parse solver output
-│   │   ├── solverPlayer.js        # Solution animation
-│   │   ├── hintController.js      # Hint functionality
-│   │   ├── startController.js     # Solver start logic
-│   │   └── restartController.js   # Restart functionality
-│   │
 │   ├── pages/
-│   │   ├── simulator.js
-│   │   ├── solver.js
-│   │   ├── about.js
-│   │   └── navigation.js
-│   │
 │   ├── ui/
-│   │   ├── timer.js
-│   │   ├── popup.js
-│   │   └── updateUI.js
-│   │
 │   └── main.js
 │
 ├── backend/
-│   ├── app.py                     # Flask server
-│   └── requirements.txt           # Python dependencies
+│   ├── app.py
+│   └── requirements.txt
 │
 ├── public/
-│   └── static assets
-│
 ├── package.json
 ├── vite.config.js
 └── index.html
 ```
+
+---
+
+# 🎥 Video Tutorial
+
+A short walkthrough of CubeStudio demonstrating cube manipulation, manual state editing, validation, and solving.
+
+## Watch the Demo
+
+https://github.com/prajwalmeshram06/CubeStudio/assets/demo.mp4
 
 ---
 
@@ -265,36 +205,6 @@ CubeStudio/
 
 ![About Page](screenshots/about.png)
 
-# Future Roadmap
-
-## Version 2
-
-Planned improvements:
-
-- Camera-based cube scanning using computer vision
-- Automatic sticker detection
-- Improved mobile experience
-- Additional cube sizes
-- Enhanced solving visualization
-
----
-
-# Experimental Features
-
-## Computer Vision Cube Scanner
-
-An experimental camera-based cube scanning pipeline was developed using OpenCV.js.
-
-The prototype explored:
-
-- Camera access
-- Image preprocessing
-- Frame processing
-- Cube face detection
-- Color recognition experiments
-
-Due to accuracy challenges in real-world environments, this feature is planned for future versions after further improvements.
-
 ---
 
 # Running Locally
@@ -303,7 +213,6 @@ Due to accuracy challenges in real-world environments, this feature is planned f
 
 ```bash
 npm install
-
 npm run dev
 ```
 
@@ -311,29 +220,86 @@ npm run dev
 
 ```bash
 cd backend
-
 pip install -r requirements.txt
-
 python app.py
 ```
+
+The frontend will start on Vite's local server and the backend will run on Flask.
 
 ---
 
 # Deployment
 
-The application is deployed using Render.
+The application is deployed using **Render**.
 
-## Live Demo
+* **Frontend:** https://cubestudio-1.onrender.com/
+* **Backend:** https://cubestudio-jz1j.onrender.com/
 
-Frontend:
-https://cubestudio-1.onrender.com/
+---
 
-Backend API:
-(Add your backend Render URL)
+# Known Limitations
+
+* The current release supports **3×3 Rubik's Cube only**.
+* Mobile experience is functional but not yet fully optimized.
+* Experimental computer vision scanning is disabled in production.
+* Solver requires a valid cube configuration before execution.
+* The drag rotation system still has a few known edge-case bugs during fast or continuous mouse interactions and is planned for further refinement in future releases.
+
+---
+
+# Future Roadmap
+
+## Version 2
+
+Planned improvements include:
+
+* Camera-based cube scanning
+* Automatic sticker detection
+* Improved mobile responsiveness
+* Additional cube sizes (2×2, 4×4)
+* Enhanced solving visualization
+* Performance optimization for low-end devices
+
+---
+
+# Experimental Features
+
+## Computer Vision Cube Scanner
+
+An experimental camera-based cube scanning pipeline was developed using **OpenCV.js**.
+
+The prototype explored:
+
+* Camera access
+* Image preprocessing
+* Edge detection
+* Contour analysis
+* Color recognition
+
+Due to accuracy challenges in uncontrolled lighting conditions, this feature is planned for future versions after additional research and calibration improvements.
+
+---
+
+# Acknowledgements
+
+* **Three.js** for the 3D rendering framework.
+* **Kociemba** Python library for the solving algorithm.
+* **Flask** for the lightweight backend framework.
+* **Vite** for the development and build tooling.
+* The open-source community for tutorials, documentation, and learning resources that supported this project.
+
+---
 
 # Author
 
-Prajwal Meshram
+**Prajwal Meshram**
 
-B.Tech Computer Science Engineering  
-IIIT Guwahati
+B.Tech Computer Science & Engineering
+**Indian Institute of Information Technology Guwahati (IIIT Guwahati)**
+
+* GitHub: https://github.com/prajwalmeshram06
+* LinkedIn: https://www.linkedin.com/in/prajwal-meshram-91b82139b/
+
+---
+
+If you found this project interesting, consider giving the repository a ⭐ on GitHub.
